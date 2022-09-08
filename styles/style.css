@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v12/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+.credit-card {
+  background-image: url(../images/bg-main-mobile.png);
+  background-size: cover;
+  height: 220px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+.credit-card-back {
+  background-image: url(../images/bg-card-back.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 320px;
+  width: 280px;
+  margin: 20px 20px 0px 80px;
+  display: flex;
+}
+.credit-card-back-number {
+  color: #fff;
+  font-size: 10px;
+  margin: 68px 20px 0px 220px;
+  letter-spacing: 1px;
+}
+.credit-card-front {
+  background-image: url(../images/bg-card-front.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 320px;
+  width: 280px;
+  margin: -70px 20px -59px -40px;
+  overflow: visible;
+}
+.credit-card-front-number {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.credit-card-front-detail {
+  color: rgb(227, 227, 227);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.container {
+  margin: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+form {
+  padding: 0px 25px 0px 25px;
+  margin-top: 80px;
+  overflow: visible;
+  text-align: center;
+}
+form label {
+  font-size: 12px;
+  color: hsl(278, 68%, 11%);
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.violet {
+  background-color: hsl(278, 68%, 11%);
+  border-color: hsl(278, 68%, 11%);
+  padding: 10px 130px 10px 130px;
+  margin-top: 20px;
+}
+.card-logo {
+  width: 50px;
+  margin: 20px;
+}
+footer {
+  padding-top: 25px;
+}
+.form-control::-webkit-input-placeholder {
+  color: hsl(270, 3%, 87%);
+}
