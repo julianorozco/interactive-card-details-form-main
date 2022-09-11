@@ -7,7 +7,8 @@ function writeCardholderName() {
 function writeCardholderNumber() {
   let writeNumber = document.getElementById("CardholderNumber");
   let number = document.getElementById("number");
-  writeNumber.innerHTML = "" + number.value + "";
+  writeNumber.innerHTML =
+    "" + number.value.slice(0, 4) + " " + number.value.slice(4, 8) + " " + number.value.slice(8, 12) + " " + number.value.slice(12, 18) + "";
 }
 
 function writeCardholderMM() {
