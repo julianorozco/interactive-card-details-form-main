@@ -22,7 +22,7 @@
         </div>
         <div class="credit-card-front">
           <img src="images/card-logo.svg" alt="card-logo" class="card-logo" />
-          <p class="credit-card-front-number d-flex justify-content-center" id="CardholderNumber">0000 0000 0000 0000</p>
+          <p class="credit-card-front-number d-flex justify-content-start" id="CardholderNumber">0000 0000 0000 0000</p>
           <div class="d-flex flex-row justify-content-between px-3">
             <div class="p-2">
               <p class="credit-card-front-detail" id="CardholderName">JANE APPLESEED</p>
@@ -36,10 +36,18 @@
         </div>
       </div>
       <div class="container">
-        <form action="index.php" method="post">
+        <form action="#" id="form">
           <div class="py-2">
             <label class="d-flex flex-row">CARDHOLDER NAME</label>
-            <input type="purchaseType" name="name" class="form-control" placeholder="e.g. Jane Appleseed" id="name" onkeyup="writeCardholderName()" />
+            <input
+              type="purchaseType"
+              name="name"
+              class="form-control"
+              placeholder="e.g. Jane Appleseed"
+              id="name"
+              onkeyup="writeCardholderName()"
+              autocomplete="off"
+            />
           </div>
           <div class="py-2">
             <label class="d-flex flex-row">CARD NUMBER</label>
@@ -51,18 +59,40 @@
               id="number"
               onkeyup="writeCardholderNumber()"
               maxlength="16"
+              autocomplete="off"
             />
           </div>
           <div class="row">
             <div class="col">
-              <label for="date">EXP. DATE</label>
-              <input type="purchaseType" class="form-control" name="date" placeholder="MM" maxlength="2" id="mm" onkeyup="writeCardholderMM()" />
+              <label for="date">EXP. DATE (MM/YY)</label>
+              <div class="row align-items-end">
+                <div class="col">
+                  <input
+                    type="purchaseType"
+                    class="form-control exp"
+                    name="date"
+                    placeholder="MM"
+                    maxlength="2"
+                    id="mm"
+                    onkeyup="writeCardholderMM()"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="purchaseType"
+                    class="form-control exp"
+                    name="date"
+                    placeholder="YY"
+                    maxlength="2"
+                    id="yy"
+                    onkeyup="writeCardholderYY()"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
             </div>
             <div class="col">
-              <label for="date">(MM/YY)</label>
-              <input type="purchaseType" class="form-control" name="date" placeholder="YY" maxlength="2" id="yy" onkeyup="writeCardholderYY()" />
-            </div>
-            <div class="col-5">
               <label for="cvc" class="px-4">CVC</label>
               <input
                 type="purchaseType"
@@ -72,27 +102,39 @@
                 maxlength="4"
                 id="cvc"
                 onkeyup="writeCardholderCVC()"
+                autocomplete="off"
               />
             </div>
           </div>
-          <input type="submit" value="Confirm" name="Confirm" class="btn btn-primary violet" />
+          <input type="button" value="Confirm" name="Confirm" class="btn btn-primary buttonc" onclick="success()" />
         </form>
+        <div id="success" class="container text-center pt-5">
+          <div class="row">
+            <div class="col-12">
+              <img src="images/icon-complete.svg" alt="success" class="pt-5" />
+            </div>
+            <div class="col-12">
+              <h2 class="thanks">THANK YOU!</h2>
+            </div>
+            <div class="col-12">
+              <p>We've added your card details</p>
+            </div>
+            <div class="col-12">
+              <input type="button" value="Continue" name="continue" class="btn btn-primary buttonc" onClick="window.location.reload()" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
-    e.g. 123 Confirm -->
-    <!-- Completed state start -->
-    <!-- Thank you! We've added your card details Continue -->
-
-    <!-- <footer class="text-center text-lg-start footer">
+    <footer class="text-center text-lg-start footer">
       <div class="attribution">
         <p>
           Challenge by
-          <a href="https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw" target="_blank">Frontend Mentor</a>. <br />
-          Coded by <a href="https://github.com/julianorozco" target="_blank">Julian Orozco</a>.
+          <a href="https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw" target="_blank">Frontend Mentor</a> Coded by
+          <a href="https://github.com/julianorozco/interactive-card-details-form-main" target="_blank">Julian Orozco</a>
         </p>
       </div>
-    </footer> -->
+    </footer>
     <script type="text/javascript" src="js/form.js"></script>
   </body>
 </html>

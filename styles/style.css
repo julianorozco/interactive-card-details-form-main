@@ -47,6 +47,7 @@ body {
   color: #fff;
   font-size: 18px;
   letter-spacing: 2px;
+  padding-left: 20px;
 }
 .credit-card-front-detail {
   color: rgb(227, 227, 227);
@@ -72,11 +73,15 @@ form label {
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
-.violet {
+.buttonc {
   background-color: hsl(278, 68%, 11%);
   border-color: hsl(278, 68%, 11%);
   padding: 10px 130px 10px 130px;
   margin-top: 20px;
+}
+.buttonc:hover {
+  background-color: hsl(278, 69%, 25%);
+  border-color: hsl(278, 69%, 25%);
 }
 .card-logo {
   width: 50px;
@@ -87,4 +92,43 @@ footer {
 }
 .form-control::-webkit-input-placeholder {
   color: hsl(270, 3%, 87%);
+}
+p {
+  color: hsl(279, 6%, 55%);
+}
+.thanks {
+  color: hsl(278, 68%, 11%);
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 35px 0px 15px 0px;
+}
+#success {
+  display: none;
+}
+/* unvisited link */
+a:link {
+  color: hsl(278, 68%, 11%);
+}
+/* visited link */
+a:visited {
+  color: hsl(278, 68%, 11%);
+}
+/* mouse over link */
+a:hover {
+  color: hsl(278, 100%, 59%);
+}
+/* selected link */
+a:active {
+  color: hsl(278, 100%, 59%);
+}
+.attribution {
+  font-size: 12px;
+}
+.form-control:focus {
+  border-color: hsl(270, 3%, 87%);
+  box-shadow: inset 0 1px 1px hsl(270, 3%, 87%), 0 0 8px hsl(270, 3%, 87%);
+}
+.form-control:hover {
+  border-color: hsl(278, 100%, 59%);
+  box-shadow: inset 0 1px 1px hsl(270, 3%, 87%), 0 0 8px hsl(270, 3%, 87%);
 }
