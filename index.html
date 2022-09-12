@@ -45,9 +45,14 @@
               class="form-control"
               placeholder="e.g. Jane Appleseed"
               id="name"
-              onkeyup="writeCardholderName()"
+              onkeyup="writeCardholderName(); validationCardholderName()"
               autocomplete="off"
             />
+            <div class="container">
+              <div class="col-7">
+                <p id="errorCardholderName" class="text-right"></p>
+              </div>
+            </div>
           </div>
           <div class="py-2">
             <label class="d-flex flex-row">CARD NUMBER</label>
@@ -57,10 +62,15 @@
               class="form-control"
               placeholder="e.g. 1234 5678 9123 0000"
               id="number"
-              onkeyup="writeCardholderNumber()"
+              onkeyup="writeCardholderNumber(); validationCardholderNumber()"
               maxlength="16"
               autocomplete="off"
             />
+            <div class="container">
+              <div class="col-7">
+                <p id="errorCardholderNumber" class="text-right"></p>
+              </div>
+            </div>
           </div>
           <div class="row">
             <div class="col">
@@ -74,7 +84,7 @@
                     placeholder="MM"
                     maxlength="2"
                     id="mm"
-                    onkeyup="writeCardholderMM()"
+                    onkeyup="writeCardholderMM(); validationCardholderMM()"
                     autocomplete="off"
                   />
                 </div>
@@ -86,9 +96,14 @@
                     placeholder="YY"
                     maxlength="2"
                     id="yy"
-                    onkeyup="writeCardholderYY()"
+                    onkeyup="writeCardholderYY(); validationCardholderYY()"
                     autocomplete="off"
                   />
+                </div>
+                <div class="container">
+                  <div class="col-7">
+                    <p id="errorCardholderMMYY" class="text-right"></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -101,12 +116,17 @@
                 placeholder="e.g. 123"
                 maxlength="4"
                 id="cvc"
-                onkeyup="writeCardholderCVC()"
+                onkeyup="writeCardholderCVC(); validationCardholderCVC()"
                 autocomplete="off"
               />
+              <div class="container">
+                <div class="col-7">
+                  <p id="errorCardholderCVC" class="text-right"></p>
+                </div>
+              </div>
             </div>
           </div>
-          <input type="button" value="Confirm" name="Confirm" class="btn btn-primary buttonc" onclick="success()" />
+          <input type="button" value="Confirm" name="Confirm" class="btn btn-primary buttonc" onClick="success()" />
         </form>
         <div id="success" class="container text-center pt-5">
           <div class="row">
